@@ -40,50 +40,50 @@
    Enable these if you are going to be doing a lot of small (<= 16 digit) multiplications say in ECC
    Or if you're on a 64-bit machine doing RSA as a 1024-bit integer == 16 digits ;-)
  */
-#define TFM_SMALL_SET
+// #define TFM_SMALL_SET
 
 /* do we want huge code
    Enable these if you are doing 20, 24, 28, 32, 48, 64 digit multiplications (useful for RSA)
    Less important on 64-bit machines as 32 digits == 2048 bits
  */
-#if 0
-#define TFM_MUL3
-#define TFM_MUL4
-#define TFM_MUL6
-#define TFM_MUL7
-#define TFM_MUL8
-#define TFM_MUL9
-#define TFM_MUL12
-#define TFM_MUL17
-#endif
-#define TFM_MUL20
-#define TFM_MUL24
-#define TFM_MUL28
-#define TFM_MUL32
-#define TFM_MUL48
-#define TFM_MUL64
+/* #if 0 */
+/* #define TFM_MUL3 */
+/* #define TFM_MUL4 */
+/* #define TFM_MUL6 */
+/* #define TFM_MUL7 */
+/* #define TFM_MUL8 */
+/* #define TFM_MUL9 */
+/* #define TFM_MUL12 */
+/* #define TFM_MUL17 */
+/* #endif */
+/* #define TFM_MUL20 */
+/* #define TFM_MUL24 */
+/* #define TFM_MUL28 */
+/* #define TFM_MUL32 */
+/* #define TFM_MUL48 */
+/* #define TFM_MUL64 */
 
-#if 0
-#define TFM_SQR3
-#define TFM_SQR4
-#define TFM_SQR6
-#define TFM_SQR7
-#define TFM_SQR8
-#define TFM_SQR9
-#define TFM_SQR12
-#define TFM_SQR17
-#endif
-#define TFM_SQR20
-#define TFM_SQR24
-#define TFM_SQR28
-#define TFM_SQR32
-#define TFM_SQR48
-#define TFM_SQR64
+/* #if 0 */
+/* #define TFM_SQR3 */
+/* #define TFM_SQR4 */
+/* #define TFM_SQR6 */
+/* #define TFM_SQR7 */
+/* #define TFM_SQR8 */
+/* #define TFM_SQR9 */
+/* #define TFM_SQR12 */
+/* #define TFM_SQR17 */
+/* #endif */
+/* #define TFM_SQR20 */
+/* #define TFM_SQR24 */
+/* #define TFM_SQR28 */
+/* #define TFM_SQR32 */
+/* #define TFM_SQR48 */
+/* #define TFM_SQR64 */
 
 /* do we want some overflow checks
    Not required if you make sure your numbers are within range (e.g. by default a modulus for fp_exptmod() can only be upto 2048 bits long)
  */
-/* #define TFM_CHECK */
+#define TFM_CHECK 
 
 /* Is the target a P4 Prescott
  */
@@ -92,7 +92,7 @@
 /* Do we want timing resistant fp_exptmod() ?
  * This makes it slower but also timing invariant with respect to the exponent
  */
-/* #define TFM_TIMING_RESISTANT */
+#define TFM_TIMING_RESISTANT 
 
 #endif
 
